@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Consents</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+</head>
+
+<body class="dark">
+    <div class="app">
+        <aside class="sidebar">
+            <h2 class="logo">ConsentSys</h2>
+            <nav class="nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="my-consents.html" class="active">My Consents</a>
+                <a href="audit.html">Audit History</a>
+                <a id="logoutBtn">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1>My Consents</h1>
+            </header>
+
+            <section class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                            <th>Valid Till</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consentTable"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/ui.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/my-consents.js"></script>
+</body>
+
+</html>

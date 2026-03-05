@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #d1d5db;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #1f2937;
+    color: white;
+}
+
+.main {
+    flex: 1;
+}
+
+.topbar {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+    padding: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h4 {
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.active-badge {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.blocked-badge {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.block-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.unblock-btn {
+    background: #10b981;
+    color: white;
+}
+
+/* ===== TABLE FIX ===== */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background: #f4f6f9;
+    font-weight: 600;
+}
+
+.table tr:hover {
+    background: #f9f9f9;
+}
+
+/* BLOCK BUTTON */
+.blockBtn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* UNBLOCK BUTTON */
+.unblockBtn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SEND CONSENT */
+.consentBtn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* STATUS BADGES */
+
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.blocked {
+    color: red;
+    font-weight: bold;
+}
+
+.table td,
+.table th {
+    padding: 8px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.blocked-badge {
+    background: red;
+    color: white;
+}
+
+.active-badge {
+    background: green;
+    color: white;
+}

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+a,
+button {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    background: var(--card-bg);
+    right: 0;
+    top: 30px;
+    padding: 10px;
+    border-radius: 8px;
+}

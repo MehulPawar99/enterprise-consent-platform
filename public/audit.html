@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Audit History</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+</head>
+
+<body class="dark">
+    <div class="app">
+        <aside class="sidebar">
+            <h2 class="logo">ConsentSys</h2>
+            <nav class="nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="my-consents.html">My Consents</a>
+                <a href="audit.html" class="active">Audit History</a>
+                <a id="logoutBtn">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Audit History</h1>
+            </header>
+
+            <section class="card">
+                <ul id="auditList" class="timeline"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/audit.js"></script>
+</body>
+
+</html>

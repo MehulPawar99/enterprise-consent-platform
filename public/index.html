@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ConsentSys | Login</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+</head>
+
+<body class="dark">
+
+    <div class="auth-container">
+        <div class="auth-card">
+
+            <div class="auth-header">
+                <h1>ConsentSys</h1>
+                <p>Enterprise Consent Management Platform</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="loginTab" class="active">Login</button>
+                <button id="signupTab">Sign Up</button>
+            </div>
+
+            <form id="loginForm" class="auth-form active">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" required />
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" required />
+                </div>
+                <button typb e="submit" class="primary-btn">
+                    <span class="btn-text">Login</span>
+                    <span class="spinner hidden"></span>
+                </button>
+                <div id="loginMessage" class="message"></div>
+            </form>
+
+            <form id="signupForm" class="auth-form">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="signupName" required />
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="signupEmail" required />
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="signupPassword" required />
+                </div>
+                <button type="submit" class="primary-btn">
+                    <span class="btn-text">Create Account</span>
+                    <span class="spinner hidden"></span>
+                </button>
+                <div id="signupMessage" class="message"></div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

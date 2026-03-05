@@ -1,0 +1,139 @@
+/* ======================
+   THEME VARIABLES
+====================== */
+
+/* DARK THEME */
+body.dark {
+    --bg: #0f172a;
+    --sidebar: #020617;
+    --card: #020617;
+    --border: #1e293b;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #6366f1;
+    --success: #22c55e;
+    --warning: #facc15;
+    --danger: #ef4444;
+}
+
+/* LIGHT THEME */
+body.light {
+    --bg: #f8fafc;
+    --sidebar: #ffffff;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #0f172a;
+    --muted: #475569;
+    --primary: #4f46e5;
+    --success: #16a34a;
+    --warning: #ca8a04;
+    --danger: #dc2626;
+}
+
+/* ======================
+   GLOBAL APPLY
+====================== */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--primary);
+}
+
+/* Topbar */
+.page-header {
+    border-bottom: 1px solid var(--border);
+}
+
+/* Cards */
+.card,
+.kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Tables */
+.data-table th {
+    background: var(--bg);
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+    border-bottom: 1px solid var(--border);
+}
+
+/* Buttons */
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+/* Pills */
+.pill.active {
+    background: rgba(34, 197, 94, 0.15);
+    color: var(--success);
+}
+
+.pill.revoked {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+}
+
+/* Timeline (Audit History) */
+.timeline li {
+    border-left: 2px solid var(--primary);
+    background: var(--card);
+}
+
+/* Links */
+.nav a {
+    color: var(--muted);
+}
+
+.nav a.active,
+.nav a:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+}
+
+/* Profile dropdown */
+.profile-menu {
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+/* Inputs */
+input,
+select {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+/* Scrollbar (optional polish) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 6px;
+}

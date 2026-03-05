@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ConsentSys – Dashboard</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+</head>
+
+<body class="dark">
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">ConsentSys</h2>
+            <nav class="nav">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="my-consents.html">My Consents</a>
+                <a href="audit.html">Audit History</a>
+                <a id="logoutBtn">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="page-header">
+                <h1>Dashboard</h1>
+                <div class="topbar-actions">
+                    <button id="themeToggle" class="icon-btn">🌓</button>
+                    <div class="profile">
+                        <span id="profileBtn"></span>
+                        <div class="profile-menu" id="profileMenu">
+                            <p id="userEmail">Loading...</p>
+                            <button id="logoutBtn2" class="secondary-btn">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- KPI Stats -->
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Active Consents</h3>
+                    <p id="statsActive">0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Expiring Soon</h3>
+                    <p id="statsExpiring">0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Revoked</h3>
+                    <p id="statsRevoked">0</p>
+                </div>
+            </section>
+
+            <!-- Dashboard Grid -->
+            <section class="dashboard-grid">
+
+                <!-- Chart -->
+                <div class="card">
+                    <h2>Consent Analytics</h2>
+                    <canvas id="consentChart"></canvas>
+                </div>
+
+                <!-- Recent Consents -->
+                <div class="card">
+                    <h2>Recent Consents</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Status</th>
+                                <th>Valid Till</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentConsents"></tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+
+            <a href="#" id="navDashboard" class="active">Dashboard</a>
+            <a href="#" id="navUsers">Users</a>
+            <a href="#" id="navConsents">Consents</a>
+            <a href="#" id="navAudit">Audit Logs</a>
+            <a href="#" id="navLogout">Logout</a>
+        </aside>
+
+        <!-- ================= MAIN ================= -->
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <div>Enterprise Consent Platform</div>
+                <div>Welcome, <span id="adminEmail"></span></div>
+            </div>
+
+            <div class="content">
+
+                <!-- ================= DASHBOARD SECTION ================= -->
+                <div id="dashboardSection">
+
+                    <!-- STAT CARDS -->
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Total Users</h4>
+                            <p id="totalUsers">0</p>
+                        </div>
+
+                        <div class="card">
+                            <h4>Active Users</h4>
+                            <p id="activeUsers">0</p>
+                        </div>
+
+                        <div class="card">
+                            <h4>Blocked Users</h4>
+                            <p id="blockedUsers">0</p>
+                        </div>
+
+                        <div class="card">
+                            <h4>Total Consents</h4>
+                            <p id="totalConsents">0</p>
+                        </div>
+                    </div>
+
+                    <!-- USERS TABLE -->
+                    <h3 style="margin-top:30px;">Users Overview</h3>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>User Action</th>
+                                <th>Consent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTable"></tbody>
+                    </table>
+
+                </div>
+
+                <!-- ================= USERS SECTION ================= -->
+                <div id="usersSection" style="display:none;">
+                    <h3>Users Management</h3>
+                    <p>You can manage users directly below:</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTablePage"></tbody>
+                    </table>
+                </div>
+
+                <!-- ================= CONSENTS SECTION ================= -->
+                <div id="consentsSection" style="display:none;">
+
+                    <h3>Consents Management</h3>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>User Email</th>
+                                <th>Purpose</th>
+                                <th>Status</th>
+                                <th>Valid Till</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="consentsTable"></tbody>
+                    </table>
+
+                </div>
+
+                <!-- ================= AUDIT SECTION ================= -->
+                <div id="auditSection" style="display:none;">
+                    <h3>Audit Logs</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Target User_ID</th>
+                                <th>Action</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="auditTable"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <!-- SEND CONSENT MODAL -->
+    <div id="consentModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+
+        <div style="background:white; padding:20px; width:400px; margin:100px auto; border-radius:8px;">
+
+            <h3>Send Consent Request</h3>
+
+            <input type="hidden" id="consentUserEmail">
+
+            <label>Purpose</label>
+            <input type="text" id="consentPurpose" placeholder="Example: Marketing Emails"
+                style="width:100%; padding:8px; margin:8px 0;">
+
+            <label>Valid Till</label>
+            <input type="date" id="consentValidTill" style="width:100%; padding:8px; margin:8px 0;">
+
+            <button onclick="sendConsent()">Send</button>
+            <button onclick="closeConsentModal()">Cancel</button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+    <script src="js/admin2.js"></script>
+
+</body>
+
+</html>
